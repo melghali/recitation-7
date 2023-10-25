@@ -19,6 +19,9 @@ jobs:
       - name: Install dependencies
         run: |
           pipenv install --deploy --dev
+      - name: Install piptest cov
+        run: |
+          pip install pytest-cov
       - name: Move to flask folder
         run: |
           cd app
